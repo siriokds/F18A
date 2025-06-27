@@ -11,7 +11,7 @@ Unlocking is done by writing $1C to VR57 twice, which on a real 9918A VDP is the
 
 Value $1C in VR1 looks like this:
 
-```
+REG1:
 |4/16K|BLANK| IE0 | M1  | M2  |  -  |SIZE | MAG |
 |-----|-----|-----|-----|-----|-----|-----|-----|
 |  0  |  0  |  0  |  1  |  1  |  1  |  0  |  0  |
