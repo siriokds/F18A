@@ -126,3 +126,23 @@ f18a_absent:
   ; Add your fallback code here
   ret
 ```
+## Detection 2
+
+If you don't want to go through all the mess of setting the SAT to disable sprites and wait for VSYNC, then another method would be:
+
+1. Unlock sequence  
+2. Write to VR1 to disable the interrupt  
+3. Read VDP status  
+4. Set status register to **SR1** (stays on **SR0** for the 9918A)  
+5. Read VDP status  
+6. Set status register back to **SR0**  
+7. Enable interrupts  
+
+**SR1** is the identity register and returns:
+
+Bit: |7 6 5 | 4 3 2 | 1 | 0  
+:---:|:---:|:---:|:---:|:---:|
+Value: |1 1 1 | 0 0 0 | blank | horz_int
+
+
+For the 9938/58, bit-2 will never be set, so you can determine a 9918A, F18A, 9938, 9958 with this method.
