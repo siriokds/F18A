@@ -38,3 +38,91 @@ MAIN
 ```
 
 That is a total of 6 bytes of assembly, which is pretty small for the test. The GPU will clear the word at $3F00, which in this case is the CLR instruction's opcode itself. You have to love self modifying code. :-) After the code runs, the value at VRAM $3F00 will be $00 if the F18A is present, otherwise it will be $04 on a stock VDP.
+
+This is the code to load the program to VRAM. I'm including all the support routines here too so it is a complete program:
+
+# F18A GPU Detection in Z80 Assembly
+
+This code loads a small GPU program into VRAM at address `0x3F00`, triggers it by setting the GPU's program counter, and then checks the result by reading back the value at `0x3F00`. If the GPU executed the code (i.e., F18A is present), the byte at `0x3F00` will be zero.
+
+```z80
+; === F18A GPU Detection Routine in Z80 Assembly ===
+; Assumes: F18A already unlocked
+
+; === Copy GPU program to VRAM address 0x3F00 ===
+; GPU program (6 bytes):
+;   0x3F00: 0x04, 0xE0   ; CLR @>3F00
+;   0x3F02: 0x3F, 0x00   ; address
+;   0x3F04: 0x03, 0x40   ; IDLE
+
+ld hl, gpu_code         ; Source in memory
+ld de, 0x3F00           ; Destination in VRAM
+ld bc, 6                ; Length
+call write_block_vram   ; Copy to VRAM using VDP ports
+
+; === Trigger GPU: set PC to 0x3F00 ===
+; VR54 = 0x36 → 0x3F (MSB)
+ld a, 0x3F
+out (0xBF), a
+ld a, 0xB6              ; 0x80 + 0x36
+out (0xBF), a
+
+; VR55 = 0x37 → 0x00 (LSB)
+ld a, 0x00
+out (0xBF), a
+ld a, 0xB7              ; 0x80 + 0x37
+out (0xBF), a
+
+; === Read back value at 0x3F00 ===
+ld hl, 0x3F00
+call set_vdp_read_addr  ; Set VDP read address
+in a, (0xBE)            ; Read byte from VDP
+cp 0x00
+jp z, f18a_present
+jp f18a_absent
+
+; === GPU program as byte array ===
+gpu_code:
+  .db 0x04, 0xE0, 0x3F, 0x00, 0x03, 0x40
+
+; === Subroutine: set VDP read address ===
+; HL = VRAM address
+set_vdp_read_addr:
+  ld a, l
+  out (0xBF), a
+  ld a, h
+  and 0x3F
+  out (0xBF), a
+  ret
+
+; === Subroutine: write block to VRAM ===
+; HL = source, DE = dest VRAM, BC = length
+write_block_vram:
+  push af
+  ld a, e
+  out (0xBF), a
+  ld a, d
+  or 0x40
+  out (0xBF), a
+.copy_loop:
+  ld a, (hl)
+  out (0xBE), a
+  inc hl
+  dec bc
+  ld a, b
+  or c
+  jp nz, .copy_loop
+  pop af
+  ret
+
+; === Labels for branching ===
+f18a_present:
+  ; Detected F18A
+  ; Add your code here
+  ret
+
+f18a_absent:
+  ; Standard 9918A detected
+  ; Add your fallback code here
+  ret
+```
