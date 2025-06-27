@@ -77,7 +77,7 @@ out (0xBF), a
 ld hl, 0x3F00
 call set_vdp_read_addr  ; Set VDP read address
 in a, (0xBE)            ; Read byte from VDP
-cp 0x00
+or a
 jp z, f18a_present
 jp f18a_absent
 
