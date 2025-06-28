@@ -79,9 +79,9 @@ Combining Reg0 and Reg1 the screen modes are selected:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-NAME TABLE TABLE ADDRESSING
-Register 2 in the VDP contains the starting address for the Name Table sub-block.
-R2* 400(16) = START ADDRESS
+NAME TABLE TABLE ADDRESSING<br>
+Register 2 in the VDP contains the starting address for the Name Table sub-block.<br>
+R2* 400(16) = START ADDRESS<br><br>
 | R2 | ADDRESS |
 |:--:|:-------:|
 |00|0000
