@@ -15,7 +15,7 @@ REG1:
 |4/16K|BLANK| IE0 | M1  | M2  |  -  |SIZE | MAG |
 |-----|-----|-----|-----|-----|-----|-----|-----|
 |  0  |  0  |  0  |  1  |  1  |  1  |  0  |  0  |
-```
+
 
 By writing $1C on the real 9918A you are setting 4K VRAM, blank the screen, no interrupts, both M1 and M2 to '1' which is an illegal mode, and a '1' to the unused bit-5 that the datasheet indicates should always be '0'. This would pretty much make the real 9918A  useless, and any working software would never operate with this combination of bits in VR1.
 
