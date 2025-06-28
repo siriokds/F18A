@@ -81,7 +81,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
 
 NAME TABLE TABLE ADDRESSING<br>
 Register 2 in the VDP contains the starting address for the Name Table sub-block.<br>
-R2* 400(16) = START ADDRESS<br><br>
+R2* 400(16) = START ADDRESS<br>
 | R2 | ADDRESS |
 |:--:|:-------:|
 |00|0000
@@ -121,7 +121,7 @@ R2* 400(16) = START ADDRESS<br><br>
 
 NAME TABLE TABLE ADDRESSING<br>
 Register 3 in the VDP contains the starting address for the Color Table sub-block.<br>
-R2* 64 = START ADDRESS<br><br>
+R2* 64 = START ADDRESS<br>
 <pre>
 | R3 |  00  |  01  |  02  |  03  |  04  |  05  |  06  |  07  |  08  |  09  |  0A  |  0B  |  0C  |  0D  |  0E  |  0F  |
 | -- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
