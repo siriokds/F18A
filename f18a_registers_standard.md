@@ -12,7 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-### Register 0 / VR0  – Mode Control 0
+### Register $00 / VR0  – Mode Control 0
 
 | Bit     |  7  |  6  |  5  |  4  |  3  |  2  |  1  |  0   |
 |:-------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---: |
@@ -39,7 +39,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 1 / VR1  – Mode Control 1
+### Register $01 / VR1  – Mode Control 1
 
 | Bit     | 7   | 6   | 5   | 4   | 3 | 2 | 1 | 0 |
 |:-------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---: |
@@ -62,7 +62,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 2 / VR2  – Name Table Base Address
+### Register $02 / VR2  – Name Table Base Address
 
 | Bit     | 7   | 6   |  5  |  4  | 3 2 1 0 |
 |:-------:|:---:|:---:|:---:|:---:|:---:|
@@ -103,7 +103,7 @@ R2* 400(16) = START ADDRESS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 3 / VR3 – Color Table Base Address
+### Register $03 / VR3 – Color Table Base Address
 
 | Bit     | 7 6 5 4 3 2 1 0 |
 |:-------:|:---:|
@@ -118,7 +118,7 @@ R2* 400(16) = START ADDRESS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 4 / VR4  – Pattern Generator Table Base Address
+### Register $04 / VR4  – Pattern Generator Table Base Address
 
 | Bit     |  7  |  6  |  5  |  4  |  3  | 2 1 0 |
 |:-------:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -133,7 +133,7 @@ R2* 400(16) = START ADDRESS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 5 / VR5  – Sprite Attribute Table Base Address
+### Register $05 / VR5  – Sprite Attribute Table Base Address
 
 | Bit     | 7   | 6 5 4 3 2 1 0 |
 |:-------:|:---:|:---:|
@@ -148,7 +148,7 @@ R2* 400(16) = START ADDRESS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 6 / VR6  – Sprite Generator Table Base Address
+### Register $06 / VR6  – Sprite Generator Table Base Address
 
 | Bit     |  7  |  6  |  5  |  4  |  3  | 2 1 0 |
 |:-------:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -163,7 +163,7 @@ R2* 400(16) = START ADDRESS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-### Register 7 / VR7  – Text and Backdrop colors
+### Register $07 / VR7  – Text and Backdrop colors
 
 | Bit     | 7 6 5 4  | 3 2 1 0 |
 |:-------:|:---:|:---:|
