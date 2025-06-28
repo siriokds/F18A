@@ -87,7 +87,7 @@ R2* 400(16) = START ADDRESS<br>
 |00|0000
 |01|0400
 |02|0800
-|03|0C00 - MAXIMUM NUMBER FOR 4K RAMS
+|03|0C00<br>max address for 4K DRAMs
 |04|1000
 |05|1400
 |06|1800
@@ -99,7 +99,7 @@ R2* 400(16) = START ADDRESS<br>
 |0C|3000
 |0D|3400
 |0E|3800
-|0F|3C00 - MAXIMUM NUMBER
+|0F|3C00
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
