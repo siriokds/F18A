@@ -122,7 +122,7 @@ R2* 400(16) = START ADDRESS
 NAME TABLE TABLE ADDRESSING
 Register 3 in the VDP contains the starting address for the Color Table sub-block.
 R2* 64 = START ADDRESS
-
+<pre>
 | R3 | 00 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 0A | 0B | 0C | 0D | 0E | 0F |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 00 | 0000 | 0040 | 0080 | 00C0 | 0100 | 0140 | 0180 | 01C0 | 0200 | 0240 | 0280 | 02C0 | 0300 | 0340 | 0380 | 03C0 |
@@ -141,7 +141,7 @@ R2* 64 = START ADDRESS
 | D0 | 3400 | 3440 | 3480 | 34C0 | 3500 | 3540 | 3580 | 35C0 | 3600 | 3640 | 3680 | 36C0 | 3700 | 3740 | 3780 | 37C0 |
 | E0 | 3800 | 3840 | 3880 | 38C0 | 3900 | 3940 | 3980 | 39C0 | 3A00 | 3A40 | 3A80 | 3AC0 | 3B00 | 3B40 | 3B80 | 3BC0 |
 | F0 | 3C00 | 3C40 | 3C80 | 3CC0 | 3D00 | 3D40 | 3D80 | 3DC0 | 3E00 | 3E40 | 3E80 | 3EC0 | 3F00 | 3F40 | 3F80 | 3FC0 |
-
+</pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
