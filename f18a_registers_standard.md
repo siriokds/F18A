@@ -36,6 +36,16 @@ Combining Reg0 and Reg1 the screen modes are selected:
 | T40  | 0  | 0  | 0  | 1 (40 columns)|
 | T80  |***1***  | 0  | 0  | 1 (80 columns)|
 
+
+<details>
+<summary> Dettagli su il bit M1</summary>
+
+- `0` = Graphics I mode  
+- `1` = Text or Graphics II mode (a seconda di M2)
+- Attenzione: il bit M1 lavora in combinazione con M2
+</details>
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ### Register 1 / VR1  – Mode Control 1
