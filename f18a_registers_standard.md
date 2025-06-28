@@ -144,6 +144,9 @@ R2 * 64 = START ADDRESS<br>
 
  * Max address for  4K DRAMs
 ** Max address for 16K DRAMs
+
+Note: in GM2 (Graphics Mode 2) the allowed values are only 0000 and 2000!
+
 </pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -177,6 +180,8 @@ R2* 800(16) = START ADDRESS<br>
 |05|2800 |
 |06|3000 |
 |07|3800 | Max address for 16K DRAMs
+
+Note: in GM2 (Graphics Mode 2) the allowed values are only 0000 and 2000!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
