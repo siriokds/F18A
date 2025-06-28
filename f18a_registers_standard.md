@@ -34,6 +34,8 @@ Combining Reg0 and Reg1 the screen modes are selected:
 | T40  | 0  | 0  | 0  | 1 (40 columns)|
 | T80  |***1***  | 0  | 0  | 1 (80 columns)|
 
+---
+
 ### Register 1 / VR1  – Mode Control 1
 
 | Bit     | 7   | 6   | 5   | 4   | 3 | 2 | 1 | 0 |
