@@ -82,24 +82,24 @@ Combining Reg0 and Reg1 the screen modes are selected:
 NAME TABLE TABLE ADDRESSING<br>
 Register 2 in the VDP contains the starting address for the Name Table sub-block.<br>
 R2* 400(16) = START ADDRESS<br>
-| R2 | ADDRESS |
-|:--:|:-------:|
-|00|0000
-|01|0400
-|02|0800
-|03|0C00<br>max address for 4K DRAMs
-|04|1000
-|05|1400
-|06|1800
-|07|1C00
-|08|2000
-|09|2400
-|0A|2800
-|0B|2C00
-|0C|3000
-|0D|3400
-|0E|3800
-|0F|3C00
+| R2 | ADDRESS | Note |
+|:--:|:-------:|:-----|
+|00|0000|
+|01|0400|
+|02|0800|
+|03|0C00|Max address for 4K DRAMs
+|04|1000|
+|05|1400|
+|06|1800|
+|07|1C00|
+|08|2000|
+|09|2400|
+|0A|2800|
+|0B|2C00|
+|0C|3000|
+|0D|3400|
+|0E|3800|
+|0F|3C00|Max address for 16K DRAMs
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -128,7 +128,7 @@ R2* 64 = START ADDRESS<br>
 | 00 | 0000 | 0040 | 0080 | 00C0 | 0100 | 0140 | 0180 | 01C0 | 0200 | 0240 | 0280 | 02C0 | 0300 | 0340 | 0380 | 03C0 |
 | 10 | 0400 | 0440 | 0480 | 04C0 | 0500 | 0540 | 0580 | 05C0 | 0600 | 0640 | 0680 | 06C0 | 0700 | 0740 | 0780 | 07C0 |
 | 20 | 0800 | 0840 | 0880 | 08C0 | 0900 | 0940 | 0980 | 09C0 | 0A00 | 0A40 | 0A80 | 0AC0 | 0B00 | 0B40 | 0B80 | 0BC0 |
-| 30 | 0C00 | 0C40 | 0C80 | 0CC0 | 0D00 | 0D40 | 0D80 | 0DC0 | 0E00 | 0E40 | 0E80 | 0EC0 | 0F00 | 0F40 | 0F80 | 0FC0 |
+| 30 | 0C00 | 0C40 | 0C80 | 0CC0 | 0D00 | 0D40 | 0D80 | 0DC0 | 0E00 | 0E40 | 0E80 | 0EC0 | 0F00 | 0F40 | 0F80 | 0FC0*|
 | 40 | 1000 | 1040 | 1080 | 10C0 | 1100 | 1140 | 1180 | 11C0 | 1200 | 1240 | 1280 | 12C0 | 1300 | 1340 | 1380 | 13C0 |
 | 50 | 1400 | 1440 | 1480 | 14C0 | 1500 | 1540 | 1580 | 15C0 | 1600 | 1640 | 1680 | 16C0 | 1700 | 1740 | 1780 | 17C0 |
 | 60 | 1800 | 1840 | 1880 | 18C0 | 1900 | 1940 | 1980 | 19C0 | 1A00 | 1A40 | 1A80 | 1AC0 | 1B00 | 1B40 | 1B80 | 1BC0 |
@@ -140,7 +140,10 @@ R2* 64 = START ADDRESS<br>
 | C0 | 3000 | 3040 | 3080 | 30C0 | 3100 | 3140 | 3180 | 31C0 | 3200 | 3240 | 3280 | 32C0 | 3300 | 3340 | 3380 | 33C0 |
 | D0 | 3400 | 3440 | 3480 | 34C0 | 3500 | 3540 | 3580 | 35C0 | 3600 | 3640 | 3680 | 36C0 | 3700 | 3740 | 3780 | 37C0 |
 | E0 | 3800 | 3840 | 3880 | 38C0 | 3900 | 3940 | 3980 | 39C0 | 3A00 | 3A40 | 3A80 | 3AC0 | 3B00 | 3B40 | 3B80 | 3BC0 |
-| F0 | 3C00 | 3C40 | 3C80 | 3CC0 | 3D00 | 3D40 | 3D80 | 3DC0 | 3E00 | 3E40 | 3E80 | 3EC0 | 3F00 | 3F40 | 3F80 | 3FC0 |
+| F0 | 3C00 | 3C40 | 3C80 | 3CC0 | 3D00 | 3D40 | 3D80 | 3DC0 | 3E00 | 3E40 | 3E80 | 3EC0 | 3F00 | 3F40 | 3F80 | 3FC0 **|
+
+ * Max address for  4K DRAMs
+** Max address for 16K DRAMs
 </pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -161,6 +164,22 @@ R2* 64 = START ADDRESS<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+NAME TABLE TABLE ADDRESSING<br>
+Register 4 in the VDP contains the starting address for the Pattern Generator Table sub-block.<br>
+R2* 800(16) = START ADDRESS<br>
+| R4 | ADDRESS | Note |
+|:--:|:-------:|:--- |
+|00|0000 |
+|01|0800 | Max address for 4K DRAMs
+|02|1000 |
+|03|1800 |
+|04|2000 |
+|05|2800 |
+|06|3000 |
+|07|3800 | Max address for 16K DRAMs
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ### Register $05 / VR5  – Sprite Attribute Table Base Address
 
 | Bit     | 7   | 6 5 4 3 2 1 0 |
