@@ -28,7 +28,7 @@
 ###
 
 Combining Reg0 and Reg1 the screen modes are selected:
-| Mode | M4 | M3 | M2 | M1 |
+| Mode |***M4***| M3 | M2 | M1 |
 |:----:|:--:|:--:|:--:|:--:|
 | GM1  | 0  | 0  | 0  | 0  |
 | GM2  | 0  | 1  | 0  | 0  |
