@@ -9,6 +9,7 @@
 |    6    |   -   |   -   |   -   |   -   |   -   |  SG13 |  SG12 |  SG11 |
 |    7    |  TC3  |  TC2  |  TC1  |  TC0  |  BD3  |  BD2  |  BD1  |  BD0  |
 
+---
 
 ### Register 0 / VR0  – Mode Control 0
 
@@ -59,6 +60,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
     –       Unused / Reserved (should be 0)
     0       Fixed to 0 (do not modify)
 
+---
 
 ### Register 2 / VR2  – Name Table Base Address
 
@@ -75,6 +77,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
              
     –        Unused / Reserved (should be 0)
 
+---
 
 ### Register 3 / VR3 – Color Table Base Address
 
@@ -89,6 +92,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
     
     –        Unused / Reserved (should be 0)
 
+---
 
 ### Register 4 / VR4  – Pattern Generator Table Base Address
 
@@ -103,7 +107,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
     
     –        Unused / Reserved (should be 0)
 
-
+---
 
 ### Register 5 / VR5  – Sprite Attribute Table Base Address
 
@@ -118,6 +122,8 @@ Combining Reg0 and Reg1 the screen modes are selected:
     
     –        Unused / Reserved (should be 0)
 
+---
+
 ### Register 6 / VR6  – Sprite Generator Table Base Address
 
 | Bit     |  7  |  6  |  5  |  4  |  3  | 2 1 0 |
@@ -130,6 +136,8 @@ Combining Reg0 and Reg1 the screen modes are selected:
              PG10 to PG0 are fixed to 0 so, the address has 2K boundaries
     
     –        Unused / Reserved (should be 0)
+
+---
 
 ### Register 7 / VR7  – Text and Backdrop colors
 
