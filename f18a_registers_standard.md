@@ -119,7 +119,7 @@ R2* 400(16) = START ADDRESS<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-NAME TABLE TABLE ADDRESSING<br>
+COLOR TABLE ADDRESSING<br>
 Register 3 in the VDP contains the starting address for the Color Table sub-block.<br>
 R2 * 64 = START ADDRESS<br>
 <pre>
@@ -164,7 +164,7 @@ R2 * 64 = START ADDRESS<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-NAME TABLE TABLE ADDRESSING<br>
+PATTERN GENERATOR TABLE ADDRESSING<br>
 Register 4 in the VDP contains the starting address for the Pattern Generator Table sub-block.<br>
 R2* 800(16) = START ADDRESS<br>
 | R4 | ADDRESS | Note |
@@ -178,8 +178,9 @@ R2* 800(16) = START ADDRESS<br>
 |06|3000 |
 |07|3800 | Max address for 16K DRAMs
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
 ### Register $05 / VR5  – Sprite Attribute Table Base Address
 
 | Bit     | 7   | 6 5 4 3 2 1 0 |
@@ -211,6 +212,8 @@ R5 * 128 = START ADDRESS<br>
 | 60 | 3000 | 3080 | 3100 | 3180 | 3200 | 3280 | 3300 | 3380 | 3400 | 3480 | 3500 | 3580 | 3600 | 3680 | 3700 | 3780  |
 | 70 | 3800 | 3880 | 3900 | 3980 | 3A00 | 3A80 | 3B00 | 3B80 | 3C00 | 3C80 | 3D00 | 3D80 | 3E00 | 3E80 | 3F00 | 3F80**|
 
+ * Max address for  4K DRAMs
+** Max address for 16K DRAMs
 </pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -229,6 +232,23 @@ R5 * 128 = START ADDRESS<br>
     –        Unused / Reserved (should be 0)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+SPRITE PATTERN GENERATOR TABLE ADDRESSING<br>
+Register 6 in the VDP contains the starting address for the Sprite Pattern Generator Table sub-block.<br>
+R6 * 800(16) = START ADDRESS<br>
+| R4 | ADDRESS | Note |
+|:--:|:-------:|:--- |
+|00|0000 |
+|01|0800 | Max address for 4K DRAMs
+|02|1000 |
+|03|1800 |
+|04|2000 |
+|05|2800 |
+|06|3000 |
+|07|3800 | Max address for 16K DRAMs
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 ### Register $07 / VR7  – Text and Backdrop colors
 
