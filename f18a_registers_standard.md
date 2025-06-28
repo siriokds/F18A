@@ -49,9 +49,7 @@ Combining Reg0 and Reg1 the screen modes are selected:
 
     4/16K   VDP DRAM type mapping:
                            0 selects 4027 DRAM operation
-                           1 selects 4108/4116 DRAM operation
-            ***IMPORTANT*** 
-            Default is 1.
+                           1 selects 4108/4116 DRAM operation (***DEFAULT***, use this!)
 
     BL      Display Enable (0 = screen off, 1 = screen on)
     IE0     Enable Vertical Interrupt
