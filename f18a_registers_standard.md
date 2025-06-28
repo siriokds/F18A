@@ -80,6 +80,30 @@ Combining Reg0 and Reg1 the screen modes are selected:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+VRAM TABLE ADDRESSING
+Register 2 in the VDP contains the starting address for the Name Table sub-block.
+R2* 400(16) = START ADDRESS
+| R2 | ADDRESS |
+|:--:|:-------:|
+|00|0000
+|01|0400
+|02|0800
+|03|0C00 - MAXIMUM NUMBER FOR 4K RAMS
+|04|1000
+|05|1400
+|06|1800
+|07|1C00
+|08|2000
+|09|2400
+|0A|2800
+|0B|2C00
+|0C|3000
+|0D|3400
+|0E|3800
+|0F|3C00 - MAXIMUM NUMBER
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 ### Register 3 / VR3 – Color Table Base Address
 
 | Bit     | 7 6 5 4 3 2 1 0 |
