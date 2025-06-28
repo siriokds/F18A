@@ -9,7 +9,8 @@
 |    6    |   -   |   -   |   -   |   -   |   -   |  SG13 |  SG12 |  SG11 |
 |    7    |  TC3  |  TC2  |  TC1  |  TC0  |  BD3  |  BD2  |  BD1  |  BD0  |
 
----
+&nbsp;&nbsp;&nbsp;
+
 
 ### Register 0 / VR0  – Mode Control 0
 
